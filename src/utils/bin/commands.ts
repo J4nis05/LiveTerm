@@ -121,25 +121,34 @@ export const nvim = async (args: string[]): Promise<string> => {
 };
 
 export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
+  return `you know what? just use 'vscode'.`;
+};
+
+export const vscode = async (args?: string[]): Promise<string> => {
+  window.open('https://code.visualstudio.com/', '_blank');
+  return `Redirecting to VS Code...`;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
+  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry     || No you're not
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-  █████ █████ █████              ███             █████    ██████████
-  ░░███ ░░███ ░░███              ░░░            ███░░░███ ░███░░░░░░█
-   ░███  ░███  ░███ █ ████████   ████   █████  ███   ░░███░███     ░ 
-   ░███  ░███████████░░███░░███ ░░███  ███░░  ░███    ░███░█████████ 
-   ░███  ░░░░░░░███░█ ░███ ░███  ░███ ░░█████ ░███    ░███░░░░░░░░███
+      █████ █████ █████              ███             █████    ██████████
+     ░░███ ░░███ ░░███              ░░░            ███░░░███ ░███░░░░░░█
+      ░███  ░███  ░███ █ ████████   ████   █████  ███   ░░███░███     ░ 
+      ░███  ░███████████░░███░░███ ░░███  ███░░  ░███    ░███░█████████ 
+      ░███  ░░░░░░░███░█ ░███ ░███  ░███ ░░█████ ░███    ░███░░░░░░░░███
 ███   ░███        ░███░  ░███ ░███  ░███  ░░░░███░░███   ███  ███   ░███
-░░████████         █████  ████ █████ █████ ██████  ░░░█████░  ░░████████ 
+░░████████        █████  ████ █████ █████ ██████  ░░░█████░  ░░████████ 
 ░░░░░░░░         ░░░░░  ░░░░ ░░░░░ ░░░░░ ░░░░░░     ░░░░░░    ░░░░░░░░  
+
+Type 'help' to see the list of available commands.
+Type 'sumfetch' to display summary.
+Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 
 `;
 };

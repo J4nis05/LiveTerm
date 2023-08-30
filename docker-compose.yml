@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   liveterm:
+    container_name: liveterm
     build:
       context: .
       dockerfile: Dockerfile
